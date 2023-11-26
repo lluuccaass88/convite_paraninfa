@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <title>Convite</title>
+</head>
+
+<body>
+  <div id="convite">
+    <h1>Olá, prof Bruna</h1>
+    <p>Aceita ser nossa paraninfa?</p>
+    <div id="btn">
+      <a href="http://"><button class="btn">Sim</button></a>
+      <button id="no" class="btn" onmouseover="moverElemento()">Não</button>
+    </div>
+  </div>
+</body>
+<script>
+  function moverElemento() {
+    var btnNo = document.getElementById('no');
+    var x = Math.random() * (window.innerWidth - btnNo.clientWidth);
+    var y = Math.random() * (window.innerHeight - btnNo.clientHeight);
+
+    btnNo.style.position = 'absolute';
+    btnNo.style.left = x + 'px';
+    btnNo.style.top = y + 'px';
+  }
+</script>
+
+</html>
